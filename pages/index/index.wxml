@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="swiper">
+      <swiper indicator-dots='true' autoplay='true' interval='5000' duration='1000' circular='true'>
+        <block wx:for="{{bnrUrl}}" wx:for-index="index">
+          <swiper-item>
+            <image src='{{item.url}}' mode='aspectFill'></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <view class="page__bd">
+    <view class="weui-article" style="text-align:center;padding:20rpx 0;margin-top:10rpx;background-color:#fff;color:#353535;font-size:30rpx;">
+      <text>- 工商服务 -</text>
+    </view>
+    <view class="weui-flex"   bindtap="toLink">
+      <view class="weui-flex__item">
+        <view class="weui-flex__item__text">
+          <text class="buss-serv">企业注册</text>
+          <text class="buss-serv__desc">专业顾问团队</text>
+        </view>
+        <view class="" style="text-align:right">
+          <image src="/imgs/cate1.png" style="width:70rpx;height:70rpx;display:block;"></image>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="weui-flex__item__text">
+          <text class="buss-serv">代理记账</text>
+          <text class="buss-serv__desc">资深会计师</text>
+        </view>
+        <view class="">
+          <image src="/imgs/cate2.png" style="width:70rpx;height:70rpx;display:block;"></image>
+        </view>
+      </view>
+    </view>
+    <view class="adv1">
+      <view class="h_text">为您提供全方位财税/注册服务</view>
+      <view class="l_text">联系电话：17721080855</view>
+    </view>
+    <view class="weui-flex vlog">
+      <view class="weui-flex__item four">
+        <text class="buss-serv">专家跟进</text>
+          <text class="buss-serv__desc">超10年从业经验</text>
+      </view>
+      <view class="weui-flex__item four">
+          <image src="/imgs/ab.png" style="" mode="center"></image>
+      </view>
+    </view>
+    <view class="weui-flex">
+      <view class="weui-flex__item four">
+        <image src="/imgs/cd.png" style="" mode="center"></image>
+      </view>
+      <view class="weui-flex__item four">
+        <text class="buss-serv">高效迅速</text>
+          <text class="buss-serv__desc">办理速度快效率高</text>
+      </view>
+    </view>
+    <view class="adv2">
+      <button class="weui-btn mini-btn"  size="mini" open-type="contact">咨询我们</button>
+    </view>
+  <view class="addr">
+    <text class="buss-serv">上海总部</text>
+    <text class="buss-serv__desc">联系地址:上海市宝山区双城路803弄宝莲城7号楼1901室</text>
+    <text class="buss-serv__desc">联系电话：17721080855</text>
+  </view>
+  </view>
+  <view class="weui-footer">
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">注册服务</navigator>
+    </view> -->
+    <view class="weui-footer__text">Copyright © 新微互动</view>
+  </view>
+
+</view>

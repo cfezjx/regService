@@ -1,0 +1,97 @@
+<!--pages/link/link.wxml-->
+<view class="page">
+  <image class="banner" src="/imgs/link_banner.png"></image>
+  <!--contents-->
+  <view class="content">
+    <text class="content_title">三步极速注册</text>
+    <text class="content_desc">在上海泷晨企业管理咨询有限公司，流程简单明了，只需要带上您的身份证，联系我们的顾问为您服务</text>
+    <text class="content_desc">来电请致：17721080855  </text>
+    <text class="content_desc">邮箱：cfezjx@sina.com</text>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="three">
+          <image src="/imgs/link_name.png" style="width:48rpx;height:48rpx;"></image>
+          <text class="three_title">名称核准</text>
+          <text class="three_desc">工商局核名系统，结果精准5分钟出结果</text>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="three">
+          <image src="/imgs/link_post.png" style="width:48rpx;height:48rpx;"></image>
+          <text class="three_title">提交资料</text>
+          <text class="three_desc">收集资料由对接顾问亲自递交办理3-5工作日</text>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="three">
+          <image src="/imgs/link_rev.png" style="width:48rpx;height:48rpx;"></image>
+          <text class="three_title">领取执照</text>
+          <text class="three_desc">注册成果由专人交付客户1-2个工作日</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--form-->
+  
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="weui-form">
+    <view class="weui-form__text-area">
+      <view class="weui-form__title">开始注册</view>
+    </view>
+    <view class="weui-form__control-area">
+      <view class="weui-cells__group weui-cells__group_form">
+        <view class="weui-cells__title">*提交资料即可在线注册公司</view>
+        <view class="weui-cells weui-cells_form">
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <label class="weui-label">姓名</label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" name="realname" type="text" placeholder="请输入您的姓名" />
+            </view>
+          </view>
+          <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <label class="weui-label">电话</label>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" name="tel" type="number" placeholder="请输入您的手机号" />
+            </view>
+          </view>
+          <view class="weui-cells__title">*工商服务</view>
+          <view class="weui-cells weui-cells_checkbox weui-cells_after-title">
+            <checkbox-group bindchange="checkboxChange" name="serv">
+              <label class="weui-cell weui-check__label" wx:for="{{checkboxItems}}" wx:key="value">
+                <checkbox class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+
+                <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                  <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                  <icon class="weui-icon-checkbox_success" type="success" size="23" wx:if="{{item.checked}}"></icon>
+                </view>
+                <view class="weui-cell__bd">{{item.name}}</view>
+              </label>
+            </checkbox-group>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-form__tips-area">
+      <label for="weuiAgree" class="weui-agree">
+        <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox" />
+        <span class="weui-agree__text">阅读并同意
+          <a href="javascript:void(0);">《相关条款》</a>
+        </span>
+      </label>
+    </view>
+    <view class="weui-form__opr-area">
+      <button form-type="submit" class="weui-btn" type="primary">确定</button>
+    </view>
+    <view class="weui-form__extra-area">
+      <view class="weui-footer">
+        <view class="weui-footer__text">Copyright © 新微互动</view>
+      </view>
+    </view>
+  </view>
+  </form>
+</view>

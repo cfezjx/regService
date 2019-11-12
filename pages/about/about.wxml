@@ -1,0 +1,40 @@
+<!--pages/about/about.wxml-->
+<view class="page">
+  <image class="banner" src="/imgs/about_banner.png"></image>
+  <view class="content">
+    <text>
+    上海泷晨企业管理咨询有限公司专注于企业财税管家服务。为迎合“大众创业、万众创新”的新时代趋势，为创业者做公益支持，实现创业者在注册公司期间极速、高效、快捷的完成注册，为创业者省时、省力、省心。在财税体制改革的经济背景下，公司结合“互联网+”等国家战略转型规划，紧贴实际将目标重心放在线上线下双结合的大方向，将财税行业发展成本降低，效率提高，规范会计业务行为，保证企业财税合理规划。
+  </text>
+    <text>
+    对于创业者来说，我们是注册公司极速、高效、快捷服务提供者；对于中小型企业，我们是专业记账报税服务提供者。
+  </text>
+  </view>
+  <image class="ad" src="/imgs/about_ad.png"></image>
+  <!-- news -->
+  <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_access">
+      <view class="weui-cell__bd" style="font-size:30rpx;">相关问题</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+        <view style="display: inline-block;vertical-align:middle; font-size: 28rpx;">查看全部</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="weui-cell"  wx:for="{{news}}" bindtap="toDetail" data-id="{{item.id}}">
+    <view class="weui-cell__bd">
+      <view class="news_title">{{item.title}}</view>
+      <view style="font-size: 13px;color: #888888;">{{item.addtime}}</view>
+    </view>
+    <view class="weui-cell__hd" style="position: relative;">
+      <image src="{{url}}{{item.pic}}" style="width: 50px; height: 50px; display: block;" />
+    </view>
+  </view>
+
+   
+        <view class="weui-footer">
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">注册服务</navigator>
+    </view> -->
+    <view class="weui-footer__text">Copyright © 新微互动</view>
+  </view>
+</view>

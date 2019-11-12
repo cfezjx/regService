@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/service/service",
+    "pages/about/about",
+    "pages/link/link",
+    "pages/detail/detail",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#3a82f8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/imgs/home.png",
+        "selectedIconPath": "/imgs/home1.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "服务指南",
+        "iconPath": "/imgs/service.png",
+        "selectedIconPath": "/imgs/service1.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于我们",
+        "iconPath": "/imgs/about.png",
+        "selectedIconPath": "/imgs/about1.png"
+      },
+      {
+        "pagePath": "pages/link/link",
+        "text": "联系申报",
+        "iconPath": "/imgs/link.png",
+        "selectedIconPath": "/imgs/link1.png"
+      }
+    
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,53 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+    <view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+      <navigator url="" class="weui-cell" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">
+          <view>实时搜索文本</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <!--内容部分-->
+  <view class="content">
+    <image src="/imgs/content1.png"></image>
+    <text>代理或协助完成企业工商年报公示，工商营业执照年检网上申报。
+企业工商年报公示，原称工商年检或工商营业执照年检，指企业在规定期限内，向工商登记机关及信用信息公示平台网上申报提交年度报告，并向社会公示。</text>
+  </view>
+  <view class="content">
+    <image src="/imgs/content2.png"></image>
+    <text>代理记账公司提供的税务咨询等业务使企业达到合理税负的目的。
+代理记账公司的专业人员可以根据企业的经营情况，提出管理建议及财务监控措施，最大限度地避免企业因管理不善而造成经营效益受损，达到效益最大的目的。</text>
+  </view>
+  <view class="content">
+    <image src="/imgs/content3.png"></image>
+    <text>经营者签署的《个体工商户开业登记申请书》。
+经营者的身份证复印件；申请登记为家庭经营的，以主持经营者作为经营者登记，由全体参加经营家庭成员在《个体工商户开业登记申请书》经营者签名栏中签字予以确认。</text>
+  </view>
+
+      <view class="adv2">
+      <button class="weui-btn mini-btn" type="default" size="mini"  open-type="contact">咨询我们</button>
+    </view>
+      <view class="weui-footer">
+    <!-- <view class="weui-footer__links">
+      <navigator url="" class="weui-footer__link">注册服务</navigator>
+    </view> -->
+    <view class="weui-footer__text">Copyright © 新微互动</view>
+  </view>
+</view>
